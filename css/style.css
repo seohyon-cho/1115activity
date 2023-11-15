@@ -169,10 +169,11 @@ main figure .screen em {
   top: 60px;
   left: 50px;
   font-size: 1.4rem;
-  opacity: 0;
-}
-main figure .screen em.on {
   opacity: 0.8;
+}
+main figure .screen span {
+  width: 90px;
+  text-align: center;
 }
 
 @media screen and (max-width: 1300px) {
