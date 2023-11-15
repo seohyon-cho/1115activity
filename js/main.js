@@ -2,6 +2,7 @@ const screen = document.querySelector('.screen');
 const numbers = screen.querySelectorAll('span');
 const ampm = document.querySelector('em.on');
 const main = document.querySelector('main');
+const hr = new Date().getHours();
 
 setInterval(() => {
 	ampm.innerText = new Date().getHours() < 12 ? 'am' : 'pm';
@@ -45,3 +46,14 @@ function changeTheme() {
 		main.classList.add('night');
 	}
 }
+
+const data = [
+	{ time: hr >= 5 && hr < 11, name: 'morning' },
+	{ time: hr >= 11 && hr < 16, name: 'afternoon' },
+	{ time: hr >= 16 && hr < 20, name: 'evening' },
+	{ time: hr >= 20 || hr < 5, name: 'night' },
+];
+
+data.forEach((el) => {
+	if (el.time) main.classList.add(el.name);
+});
