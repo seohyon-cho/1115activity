@@ -165,6 +165,40 @@ main {
 	}
 }
 
+// theme style
+//morning theme
+main.morning {
+	background-image: url(../img/bg_morning.jpg);
+
+	figure {
+		background-image: url(../img/phone_morning.png);
+	}
+}
+//afternoon theme
+main.afternoon {
+	background-image: url(../img/bg_afternoon.jpg);
+
+	figure {
+		background-image: url(../img/phone_afternoon.png);
+	}
+}
+//evening theme
+main.evening {
+	background-image: url(../img/bg_evening.jpg);
+
+	figure {
+		background-image: url(../img/phone_evening.png);
+	}
+}
+//night theme
+main.night {
+	background-image: url(../img/bg_night.jpg);
+
+	figure {
+		background-image: url(../img/phone_night.png);
+	}
+}
+
 @media screen and (max-width: 1300px) {
 	main {
 		figure {
