@@ -13,7 +13,7 @@ setInterval(() => {
 // 시간값을 구해서 반환하는 함수
 function getTime() {
 	const now = new Date();
-	let hr = now.getHours() > 12 ? now.getHours() - 12 : now.getHours();
+	let hr = now.getHours();
 	let min = now.getMinutes();
 	let sec = now.getSeconds();
 	// 현재 '시'값이 13이상이 되면, 12를 뺀 값을 hr로 반환
