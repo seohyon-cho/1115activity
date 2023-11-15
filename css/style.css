@@ -37,6 +37,36 @@ main {
   background-image: url(../img/bg_morning.jpg);
   overflow: hidden;
 }
+main .cl1 {
+  position: absolute;
+  top: -100px;
+  left: 0;
+  opacity: 0;
+  animation: move 30s linear 15s infinite;
+}
+main .cl2 {
+  position: absolute;
+  top: -50px;
+  left: 0;
+  opacity: 0;
+  animation: move 30s linear 0s infinite;
+}
+@keyframes move {
+  0% {
+    opacity: 0;
+    left: -50%;
+  }
+  50% {
+    opacity: 0.5;
+  }
+  95% {
+    opacity: 0.5;
+  }
+  100% {
+    opacity: 0;
+    left: 80%;
+  }
+}
 main nav {
   width: 40%;
   padding: 5vh 5vw;
@@ -116,6 +146,23 @@ main figure .screen {
   color: #fff;
   font-family: "orbitron";
   font-size: 3rem;
+  overflow: hidden;
+}
+main figure .screen .cl1 {
+  width: 400px;
+  position: absolute;
+  top: 15px;
+  left: 0;
+  opacity: 0;
+  animation: move 30s linear 0s infinite;
+}
+main figure .screen .cl2 {
+  width: 400px;
+  position: absolute;
+  top: 30px;
+  left: 0;
+  opacity: 0;
+  animation: move 30s linear 0s infinite;
 }
 main figure .screen em {
   position: absolute;
