@@ -10,6 +10,43 @@ main {
 	background-image: url(../img/bg_morning.jpg);
 	overflow: hidden;
 
+	nav {
+		width: 40%;
+		padding: 5vh 5vw;
+		position: absolute;
+		top: 0;
+		left: 0;
+		z-index: 5;
+		display: flex;
+		justify-content: space-between;
+		color: #333;
+
+		span {
+			font-size: 1rem;
+			font-weight: bold;
+			font-family: 'orbitron';
+			letter-spacing: 1px;
+			opacity: 0.4;
+			cursor: pointer;
+
+			&.on {
+				opacity: 1;
+			}
+		}
+	}
+
+	.auto {
+		position: absolute;
+		left: 5vw;
+		bottom: 5vh;
+		color: #fff;
+		cursor: pointer;
+		font-size: 1rem;
+		background-color: transparent;
+		border: 1px solid white;
+		padding: 5px 25px;
+	}
+
 	article {
 		// 풀스크린 UI 의 경우, 필연적으로 absolute 작업해야 하는 경우가 많음 (반응형)
 		width: 35vw;

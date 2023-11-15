@@ -37,6 +37,39 @@ main {
   background-image: url(../img/bg_morning.jpg);
   overflow: hidden;
 }
+main nav {
+  width: 40%;
+  padding: 5vh 5vw;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 5;
+  display: flex;
+  justify-content: space-between;
+  color: #333;
+}
+main nav span {
+  font-size: 1rem;
+  font-weight: bold;
+  font-family: "orbitron";
+  letter-spacing: 1px;
+  opacity: 0.4;
+  cursor: pointer;
+}
+main nav span.on {
+  opacity: 1;
+}
+main .auto {
+  position: absolute;
+  left: 5vw;
+  bottom: 5vh;
+  color: #fff;
+  cursor: pointer;
+  font-size: 1rem;
+  background-color: transparent;
+  border: 1px solid white;
+  padding: 5px 25px;
+}
 main article {
   width: 35vw;
   position: absolute;
