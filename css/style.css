@@ -186,6 +186,12 @@ main.morning figure {
 main.afternoon {
   background-image: url(../img/bg_afternoon.jpg);
 }
+main.afternoon article p {
+  color: #555;
+}
+main.afternoon article em {
+  color: #555;
+}
 main.afternoon figure {
   background-image: url(../img/phone_afternoon.png);
 }

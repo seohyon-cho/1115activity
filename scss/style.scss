@@ -177,6 +177,14 @@ main.morning {
 //afternoon theme
 main.afternoon {
 	background-image: url(../img/bg_afternoon.jpg);
+	article {
+		p {
+			color: #555;
+		}
+		em {
+			color: #555;
+		}
+	}
 
 	figure {
 		background-image: url(../img/phone_afternoon.png);
