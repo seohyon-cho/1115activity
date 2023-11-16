@@ -3,6 +3,7 @@ const numbers = screen.querySelectorAll('span');
 const ampm = document.querySelector('em.on');
 const main = document.querySelector('main');
 const btns = document.querySelectorAll('nav span');
+const autoBtn = document.querySelector('main button.auto');
 
 const data = [
 	{ time: new Date().getHours() >= 5 && new Date().getHours() < 11, name: 'morning' },
@@ -18,8 +19,9 @@ setInterval(setWatch, 1000);
 
 // changeTheme의 경우는, data라는 인수를 전달해야 하므로 ()를 붙여야 함.
 // ()를 붙이는 순간에 정의형태가 아닌 호출형태로 변경이 되므로 다시 익명함수 형태로 호출문을 wrapping해서 정의형태로 변경해야 함.
+// 순서 1 - 로딩이 되자마자 1초 간격으로 changeTheme 반복 실행
 let timer = setInterval(() => changeTheme(data), 1000);
-
+// 순서 2 - 메뉴 버튼 클릭 시 강제로 clearInterval(timer) 로 changeTheme 반복 중지
 btns.forEach((btn) => {
 	btn.addEventListener('click', (e) => {
 		btns.forEach((btn) => btn.classList.remove('on'));
@@ -29,6 +31,11 @@ btns.forEach((btn) => {
 		main.className = '';
 		main.classList.add(e.currentTarget.innerText.toLowerCase());
 	});
+});
+// 순서 3 - auto 버튼 클릭 시, 다시 1초 간격으로 changeTheme 반복 실행
+autoBtn.addEventListener('click', () => {
+	timer = setInterval(() => changeTheme(data), 1000);
+	btns.forEach((btn) => btn.classList.remove('on'));
 });
 
 function setWatch() {
